@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Happy Valentine Day</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../CSS/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div id="page1">
+				<img
+					src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2l4bm82bXl3aXphbTR4aGR4aG55b3F4aG55b3F4aG55b3F4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/cLS1cfxvGOPVpf9g3y/giphy.gif"
+					alt="Cute Bear"
+					class="cute-gif"
+				/>
+				<h1>Will you be mine? 🥺</h1>
+				<p>Life is better with you. Want to spend every second with me?</p>
+
+				<button class="btn" id="yesBtn" onclick="goToPage('page2')">YES</button>
+				<button
+					class="btn btn-secondary"
+					id="noBtn"
+					onmouseover="moveButton()"
+					onclick="moveButton()"
+					ontouchstart="moveButton()"
+				>
+					NO
+				</button>
+			</div>
+
+			<div id="page2" class="hidden">
+				<h1>Happy Valentine's Day! 💖</h1>
+				<p>
+					Aap meri life ka woh chhota sa spark hai jo poori duniya roshan kar
+					deta hai! ❤️
+				</p>
+				<p><strong>Tap a gift to open:</strong></p>
+				<div class="gift-grid">
+					<div class="gift-box" onclick="goToPage('gift1')">
+						<div class="gift-icon">🎁</div>
+						<div>Quiz</div>
+					</div>
+					<div class="gift-box" onclick="goToPage('gift2')">
+						<div class="gift-icon">📸</div>
+						<div>Memories</div>
+					</div>
+					<div class="gift-box" onclick="goToPage('gift3')">
+						<div class="gift-icon">💌</div>
+						<div>Letter</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="gift1" class="hidden">
+				<h2>Quiz for You 🧐</h2>
+				<p>Hum dono mein se jada kon pyaar karta ?</p>
+				<button class="btn" onclick="alert('Nice try, but wrong! 😈')">
+					Me (Vaishu14)
+				</button>
+				<button
+					class="btn btn-secondary"
+					onclick="alert('Correct! I love you! 😘')"
+				>
+					You (Vaishu15)
+				</button>
+				<br /><br />
+				<button class="btn btn-secondary" onclick="goToPage('page2')">
+					Back
+				</button>
+			</div>
+
+			<div id="gift2" class="hidden">
+				<h2>Tap photos to flip! 👇</h2>
+				<div class="gallery">
+					<div
+						class="photo-frame"
+						onclick="
+							this.querySelector('.photo-inner').classList.toggle('flipped')
+						"
+					>
+						<div class="photo-inner">
+							<div class="photo-front">
+								<img src="../resources/IMG-20251206-WA0080.jpg" alt="Us 1" />
+							</div>
+							<div class="photo-back"><p>Your First Mahendi For Me 🙈</p></div>
+						</div>
+					</div>
+					<div
+						class="photo-frame"
+						onclick="
+							this.querySelector('.photo-inner').classList.toggle('flipped')
+						"
+					>
+						<div class="photo-inner">
+							<div class="photo-front">
+								<img
+									src="../resources/Screenshot_2025-11-16-08-37-28-25_1c337646f29875672b5a61192b9010f9.jpg"
+									alt="Us 2"
+								/>
+							</div>
+							<div class="photo-back"><p>Your First Reply ❤️</p></div>
+						</div>
+					</div>
+					<div
+						class="photo-frame"
+						onclick="
+							this.querySelector('.photo-inner').classList.toggle('flipped')
+						"
+					>
+						<div class="photo-inner">
+							<div class="photo-front">
+								<img src="../resources/Snapchat-314241158.jpg" alt="Us 3" />
+							</div>
+							<div class="photo-back">
+								<p>
+									Our First Meeting 😁 <br />
+									2 jan 2026
+								</p>
+							</div>
+						</div>
+					</div>
+					<div
+						class="photo-frame"
+						onclick="
+							this.querySelector('.photo-inner').classList.toggle('flipped')
+						"
+					>
+						<div class="photo-inner">
+							<div class="photo-front">
+								<img src="../resources/Snapchat-578430293.jpg" alt="Us 4" />
+							</div>
+							<div class="photo-back"><p>Our First Touch 🥰</p></div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<button class="btn btn-secondary" onclick="goToPage('page2')">
+					Back
+				</button>
+			</div>
+
+			<div id="gift3" class="hidden">
+				<h2>A Letter For You 💌</h2>
+				<p
+					style="
+						text-align: left;
+						background: #fff0f3;
+						padding: 20px;
+						border-radius: 10px;
+					"
+				>
+					Dear Patni Ji,<br /><br />
+					Thank you for being my person. I want to hold your hand through every
+					season of life. You are my home.<br /><br />
+					I love you more than words can say.<br /><br />
+					Forever yours,<br />
+					[Pati dev ji]
+				</p>
+				<button class="btn" onclick="goToPage('finalPage')">
+					See One Last Thing
+				</button>
+			</div>
+
+			<div id="finalPage" class="hidden">
+				<img
+					src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif"
+					class="cute-gif"
+				/>
+				<h1>You are my forever ❤️</h1>
+				<p>I love you soo much patni ji!</p>
+
+				<button
+					class="btn"
+					onclick="goToPage('messagePage')"
+					style="
+						position: absolute;
+						bottom: 20px;
+						right: 20px;
+						font-size: 0.8em;
+						padding: 8px 15px;
+					"
+				>
+					Msg Me 💬
+				</button>
+			</div>
+
+			<div id="messagePage" class="hidden">
+				<h2>Share Your Feelings! 💬</h2>
+				<p>Scan the QR code or click the button below:</p>
+
+				<img
+					src="../resources/Gemini_Generated_Image_1vpg7g1vpg7g1vpg.png"
+					alt="Scan Me"
+					class="qr-img"
+				/>
+
+				<a href="https://bit.ly/4qt9pzf" class="btn">Chat on WhatsApp</a>
+
+				<br /><br />
+				<button class="btn btn-secondary" onclick="goToPage('finalPage')">
+					Back
+				</button>
+			</div>
+		</div>
+
+		<script src="../JS/script.js"></script>
+	</body>
+</html>
